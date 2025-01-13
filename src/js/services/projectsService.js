@@ -11,8 +11,6 @@ export default class ProjectsService {
     constructor(storageService) {
         this.storageService = storageService;
         this.projects = storageService.load(PROJECTS_KEY_IN_STORAGE) || [];
-
-        window.onbeforeunload = this.saveProjectsToStorage.bind(this);
     }
 
     getAllProjects() {
