@@ -1,3 +1,7 @@
+:root {
+    --link-transition-duration: .1s;
+}
+
 nav {
     display: flex;
     flex-direction: column;
@@ -54,4 +58,22 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 2px;
+}
+
+.filter-link {
+    cursor: pointer;
+}
+
+.filter-link:hover {
+    transition: var(--link-transition-duration);
+    background-color: var(--color-weak-accent);
+}
+
+.filter-link .nav-link__svg-container svg {
+    fill: var(--color-icon-default);
+}
+
+.filter-link:hover .nav-link__svg-container svg {
+    transition: var(--link-transition-duration);
+    fill: var(--color-icon-hover);
 }
