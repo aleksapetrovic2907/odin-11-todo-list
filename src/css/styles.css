@@ -10,6 +10,9 @@
     --color-error: #FCE4EC; /* Pastel pink for errors */
     --color-warning: #FFF3E0; /* Pastel orange for warnings */
     --color-success: #C8E6C9; /* Reusing secondary for success feedback */
+
+    --color-icon-default: #afb8bd; /* Default icon color */
+    --color-icon-hover: #A5D6A7; /* Green hover color, matches your accent */
 }
 
 body {
