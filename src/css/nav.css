@@ -3,6 +3,7 @@ nav {
     flex-direction: column;
 
     background-color: var(--color-neutral-light);
+    padding: 8px 16px;
 }
 
 /* Logo */
