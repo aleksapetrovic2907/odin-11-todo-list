@@ -3,7 +3,7 @@
 :root {
     --color-primary: #E8F5E9; /* Very light pastel green */
     --color-secondary: #C8E6C9; /* Soft mint green */
-    --color-accent: #A5D6A7; /* Slightly deeper pastel green */
+    --color-accent: #8fdf91; /* Slightly deeper pastel green */
     --color-background: #F1F8E9; /* Very light yellow-green for backgrounds */
     --color-neutral-light: #F9FBF8; /* Almost white, very subtle green tint */
     --color-neutral-dark: #B9D7C9; /* Muted green-gray for text or borders */
@@ -12,7 +12,7 @@
     --color-success: #C8E6C9; /* Reusing secondary for success feedback */
 
     --color-icon-default: #afb8bd; /* Default icon color */
-    --color-icon-hover: #A5D6A7; /* Green hover color, matches your accent */
+    --color-icon-hover: #8fdf91; /* Green hover color, matches your accent */
 }
 
 body {
