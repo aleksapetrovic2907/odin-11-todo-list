@@ -1,4 +1,4 @@
-class LocalStorageService {
+export default class LocalStorageService {
     save(key, data) {
         localStorage.setItem(key, JSON.stringify(data));
     }
@@ -16,6 +16,3 @@ class LocalStorageService {
         localStorage.clear();
     }
 }
-
-const localStorageService = new LocalStorageService();
-export default localStorageService;
