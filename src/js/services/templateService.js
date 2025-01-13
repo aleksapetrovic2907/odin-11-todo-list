@@ -5,7 +5,7 @@ export default class TemplateService {
      * @param {Object} data - Key-value pairs where keys correspond to placeholders
      * @returns {string} - The updated template with replaced values
      */
-    render(template, data) {
+    static render(template, data) {
         let renderedTemplate = template;
 
         Object.keys(data).forEach(key => {
