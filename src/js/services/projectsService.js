@@ -10,6 +10,8 @@ export default class ProjectsService {
     constructor(storageService) {
         this.storageService = storageService;
         this.projects = storageService.load(PROJECTS_KEY_IN_STORAGE) || [];
+
+        window.onbeforeunload = this.saveProjectsToLocalStorage.bind(this);
     }
 
     getAllProjects() {
@@ -23,12 +25,14 @@ export default class ProjectsService {
     createProject(name) {
         const project = new Project(name);
         this.projects.push(project);
-        this.storageService.save(PROJECTS_KEY_IN_STORAGE, this.projects);
         return project;
     }
 
     deleteProject(projectId) {
         this.projects = this.projects.filter(p => p.id !== projectId);
+    }
+
+    saveProjectsToLocalStorage() {
         this.storageService.save(PROJECTS_KEY_IN_STORAGE, this.projects);
     }
 }
