@@ -8,11 +8,14 @@ export default class TemplateService {
     static render(template, data) {
         let renderedTemplate = template;
 
-        Object.keys(data).forEach(key => {
-            const regex = new RegExp(`{{${key}}}`, 'g');
-            renderedTemplate = renderedTemplate.replace(regex, data[key]);
-        });
+        // Replace placeholders with actual data
+        for (const key in data) {
+            renderedTemplate = renderedTemplate.replace(`{{${key}}}`, data[key]);
+        }
 
-        return renderedTemplate;
+        const div = document.createElement('div');
+        div.innerHTML = renderedTemplate.trim();
+
+        return div.firstElementChild;
     }
 }
