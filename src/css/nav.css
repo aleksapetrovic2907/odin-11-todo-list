@@ -48,3 +48,10 @@ nav {
     padding: 4px;
     border-radius: 4px;
 }
+
+/* Filter Links */
+.filter-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
