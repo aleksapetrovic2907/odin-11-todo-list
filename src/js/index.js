@@ -1,3 +1,5 @@
+import 'normalize.css'
+
 import LocalStorageService from "./services/localStorageService.js";
 import ProjectsService from "./services/projectsService.js";
 
