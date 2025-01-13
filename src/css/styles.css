@@ -1,3 +1,11 @@
+:root {
+    --color-dawn-pink: #EDEDE9;
+    --color-pastel-grey: #D6CCC2;
+    --color-eggshell: #F5EBE0;
+    --color-timberwolf: #E3D5CA;
+    --color-vanilla: #D5BDAF;
+}
+
 .main {
     width: 100vw;
     height: 100vh;
