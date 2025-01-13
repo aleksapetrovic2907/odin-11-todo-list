@@ -18,6 +18,8 @@ function refreshProjectLinks() {
                 const event = new CustomEvent("projectLinkSelected", {
                     detail: { projectId: p.id },
                 });
+                
+                document.dispatchEvent(event);
             }
         });
         projectLinks.appendChild(projectLink);
