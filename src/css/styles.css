@@ -3,6 +3,7 @@
 :root {
     --color-primary: #E8F5E9; /* Very light pastel green */
     --color-secondary: #C8E6C9; /* Soft mint green */
+    --color-weak-accent: #e6fde5; /* Hint of green */
     --color-accent: #8fdf91; /* Slightly deeper pastel green */
     --color-background: #F1F8E9; /* Very light yellow-green for backgrounds */
     --color-neutral-light: #F9FBF8; /* Almost white, very subtle green tint */
