@@ -22,9 +22,9 @@ upcomingTasksLink.addEventListener("click", () => {
     }
 });
 
-function selectFilter(filterType) {
+function selectFilter(type) {
     const event = new CustomEvent("filterLinkSelected", {
-        detail: { type: filterType },
+        detail: { filterType: type },
     });
 
     document.dispatchEvent(event);
