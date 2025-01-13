@@ -1,4 +1,4 @@
-import projectLinkTemplateUrl from "../../html/user-panel/project-link.html";
+import projectLinkTemplateUrl from "../../html/nav/project-link.html";
 
 import { projectsService } from "../index.js";
 import TemplateService from "../services/templateService.js";
