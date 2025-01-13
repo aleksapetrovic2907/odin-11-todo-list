@@ -1,6 +1,8 @@
 nav {
     display: flex;
     flex-direction: column;
+
+    background-color: var(--color-neutral-light);
 }
 
 /* Logo */
