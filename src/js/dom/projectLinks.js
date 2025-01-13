@@ -13,7 +13,7 @@ function refreshProjectLinks() {
     projects.forEach(p => {
         const data = { name: p.name, };
         const projectLink = TemplateService.render(projectLinkTemplateUrl, data);
-        projectLink.addEventListener(() => {
+        projectLink.addEventListener("click", () => {
             if (trySelect(projectLink)) {
                 const event = new CustomEvent("projectLinkSelected", {
                     detail: { projectId: p.id },
