@@ -12,7 +12,7 @@ export default class ProjectsService {
         this.storageService = storageService;
         this.projects = storageService.load(PROJECTS_KEY_IN_STORAGE) || [];
 
-        window.onbeforeunload = this.saveProjectsToLocalStorage.bind(this);
+        window.onbeforeunload = this.saveProjectsToStorage.bind(this);
     }
 
     getAllProjects() {
@@ -43,7 +43,7 @@ export default class ProjectsService {
         return null;
     }
 
-    saveProjectsToLocalStorage() {
+    saveProjectsToStorage() {
         this.storageService.save(PROJECTS_KEY_IN_STORAGE, this.projects);
     }
 }
