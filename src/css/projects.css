@@ -57,3 +57,7 @@
     font-size: .8rem;
     font-weight: 300;
 }
+
+.task__actions svg {
+    fill: var(--color-icon-default);
+}
