@@ -87,6 +87,10 @@ nav {
     fill: var(--color-icon-hover);
 }
 
+.filter-link.selected .nav-link__svg-container svg {
+    fill: var(--color-icon-hover);
+}
+
 /* Project Links */
 .project-links-section-title {
     display: flex;
