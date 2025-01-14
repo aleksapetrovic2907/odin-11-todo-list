@@ -118,3 +118,9 @@ nav {
     transition-duration: .1s;
     transform: scale(1.1);
 }
+
+.project-links {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
