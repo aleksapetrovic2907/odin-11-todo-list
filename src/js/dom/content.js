@@ -1,5 +1,6 @@
 import projectTemplateUrl from "../../html/content/project.html";
 import taskTemplateUrl from "../../html/content/task.html";
+import filterTypeTitleTemplateUrl from "../../html/content/filterTitle.html";
 
 import { projectsService } from "../index.js";
 import { filterAll, filterTodays, filterUpcoming } from "./filterer.js";
@@ -43,12 +44,39 @@ function selectFilterer(filterType) {
 
 function displayProjects(projects) {
     displayedProjectsList = projects;
-
     projectsNode.innerHTML = "";
+
+    const filterTitleNode = generateFilterTitleNode();
+    if (filterTitleNode) {
+        projectsNode.appendChild(filterTitleNode);
+    }
+
     projects.forEach(p => {
         const projectNode = generateProjectNode(p);
         projectsNode.appendChild(projectNode);
     });
+}
+
+function generateFilterTitleNode() {
+    if (!filterer) return null;
+
+    let filterTitle = "";
+    switch (filterer) {
+        case filterAll:
+            filterTitle = "All";
+            break;
+
+        case filterTodays:
+            filterTitle = "Today";
+            break;
+
+        case filterUpcoming:
+            filterTitle = "Upcoming";
+            break;
+    }
+    const data = { title: filterTitle}
+    const filterTitleNode = TemplateService.render(filterTypeTitleTemplateUrl, data);
+    return filterTitleNode;
 }
 
 function generateProjectNode(project) {
@@ -85,7 +113,7 @@ function generateTaskNode(project, task) {
         taskService.deleteTask(task.id);
         displayProjects(displayedProjectsList);
     });
-    
+
     // TODO: Add event listeners to edit task.
 
     return taskNode;
