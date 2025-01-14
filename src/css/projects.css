@@ -18,7 +18,8 @@
 }
 
 .project__name {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    font-weight: 500;
     border-bottom: 2px dotted var(--color-neutral-light-grey);
 }
 
