@@ -9,10 +9,9 @@ const projectLinks = document.querySelector(".project-links");
 
 function refreshProjectLinks() {
     projectLinks.innerHTML = "";
-    let counter = 0;
-
     const projects = projectsService.getAllProjects();
-    projects.forEach(p => {
+    
+    projects.forEach((p, index) => {
         const data = { name: p.name, };
         const projectLink = TemplateService.render(projectLinkTemplateUrl, data);
         projectLink.addEventListener("click", () => {
@@ -26,8 +25,7 @@ function refreshProjectLinks() {
         });
 
         const hashtagSVG = projectLink.querySelector("svg");
-        hashtagSVG.style.fill = ColorService.getColorWithSteppedHue(0, 75, counter, 70, 55);
-        counter++;
+        hashtagSVG.style.fill = ColorService.getColorWithSteppedHue(0, 75, index, 70, 55);
 
         projectLinks.appendChild(projectLink);
     });
