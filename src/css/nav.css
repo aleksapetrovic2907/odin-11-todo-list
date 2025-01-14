@@ -124,3 +124,9 @@ nav {
     flex-direction: column;
     gap: 2px;
 }
+
+.project-link__svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
