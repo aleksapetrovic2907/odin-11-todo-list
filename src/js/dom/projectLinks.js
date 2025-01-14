@@ -3,11 +3,13 @@ import projectLinkTemplateUrl from "../../html/nav/project-link.html";
 import { projectsService } from "../index.js";
 import TemplateService from "../services/templateService.js";
 import trySelect from "./linksManager.js";
+import ColorService from "../services/colorService.js";
 
 const projectLinks = document.querySelector(".project-links");
 
 function refreshProjectLinks() {
     projectLinks.innerHTML = "";
+    let counter = 0;
 
     const projects = projectsService.getAllProjects();
     projects.forEach(p => {
@@ -18,10 +20,15 @@ function refreshProjectLinks() {
                 const event = new CustomEvent("projectLinkSelected", {
                     detail: { projectId: p.id },
                 });
-                
+
                 document.dispatchEvent(event);
             }
         });
+
+        const hashtagSVG = projectLink.querySelector("svg");
+        hashtagSVG.style.fill = ColorService.getColorWithSteppedHue(0, 75, counter, 70, 55);
+        counter++;
+
         projectLinks.appendChild(projectLink);
     });
 }
