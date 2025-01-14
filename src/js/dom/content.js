@@ -19,7 +19,7 @@ function subscribeToEvents() {
         displayProjects(projects);
     });
 
-    document.addEventListener("filterSelected", (e) => {
+    document.addEventListener("filterLinkSelected", (e) => {
         selectFilterer(e.details.filterType);
         const filteredProjects = filterer(projectsService.getAllProjects());
         displayProjects(filteredProjects);
