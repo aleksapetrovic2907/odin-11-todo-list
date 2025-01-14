@@ -14,7 +14,7 @@ subscribeToEvents();
 
 function subscribeToEvents() {
     document.addEventListener("projectLinkSelected", (e) => {
-        const project = projectsService.getProjectById(e.details.projectId);
+        const project = projectsService.getProjectById(e.detail.projectId);
         displayProjects(project);
     });
 
