@@ -1,0 +1,52 @@
+/* Projects */
+.projects {
+    padding: 24px 36px;
+}
+
+/* Project */
+.project {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 48px;
+}
+
+.project__name {
+    font-size: 1.6rem;
+    border-bottom: 2px dotted var(--color-neutral-light-grey);
+}
+
+/* Tasks */
+.task {
+    display: flex;
+    border-bottom: 1px solid var(--color-neutral-light-grey);
+    padding: 16px 4px;
+}
+
+.task__completion-mark {
+    border-radius: 50%;
+    border: 1px solid var(--color-neutral-dark-grey);
+    height: 1.25rem;
+    width: 1.25rem;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.task__completion-mark:hover {
+    transition-duration: .1s;
+    transform: scale(1.1);
+}
+
+.task__details {
+    flex: 1 1 0;
+    padding-left: 12px;
+}
+
+.task__details-name {
+}
+
+.task__details-dueDate {
+    margin-top: 4px;
+    font-size: .8rem;
+    font-weight: 300;
+}
