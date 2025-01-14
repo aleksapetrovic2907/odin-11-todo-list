@@ -13,7 +13,7 @@ function filterTodays(projects) {
 function filterUpcoming(projects) {
     return projects.filter((project) =>
         project.tasks.some(
-            (task) => isToday(parseISO(task.dueDate)) || isFuture(parseISO(task.dueDate))
+            (task) => isFuture(parseISO(task.dueDate))
         )
     );
 }
