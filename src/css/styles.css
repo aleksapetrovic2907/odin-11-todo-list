@@ -14,6 +14,9 @@
 
     --color-icon-default: #BBA49D; /* Neutral warm grey for icons */
     --color-icon-hover: #E34432; /* Matches the accent orange */
+
+    --color-neutral-light-grey: hsl(30, 40%, 94%);
+    --color-neutral-dark-grey: hsl(30, 0%, 65%);
 }
 
 body {
