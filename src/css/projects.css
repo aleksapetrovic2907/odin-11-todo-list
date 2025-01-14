@@ -49,9 +49,6 @@
     padding-left: 12px;
 }
 
-.task__details-name {
-}
-
 .task__details-dueDate {
     margin-top: 4px;
     font-size: .8rem;
@@ -60,4 +57,57 @@
 
 .task__actions svg {
     fill: var(--color-icon-default);
+}
+
+/* Task Tooltip */
+.task-tooltip {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.task-tooltip .task-tooltip-text {
+    visibility: hidden;
+    width: max-content;
+    max-width: 200px;
+    background-color: var(--color-accent);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+
+    /* Positioning */
+    position: absolute;
+    bottom: 125%;
+    /* Position above the icon */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+
+    /* Optional: Add an arrow */
+    opacity: 0;
+    transition: opacity 0.2s;
+}
+
+.task-tooltip:hover .task-tooltip-text {
+    visibility: visible;
+    opacity: 1;
+}
+
+.task-tooltip:hover svg {
+    transition-duration: .1s;
+    fill: var(--color-accent);
+}
+
+.task-tooltip .task-tooltip-text::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    /* Place arrow at the bottom of the tooltip */
+    left: 50%;
+    transform: translateX(-50%);
+    border-width: 5px;
+    border-style: solid;
+    border-color: var(--color-accent) transparent transparent transparent;
 }
