@@ -8,7 +8,7 @@ import { format } from "date-fns";
 
 const projectsNode = document.querySelector(".projects");
 let displayedProjectsList = null;
-let filterer = filterAll;
+let filterer = null;
 
 subscribeToEvents();
 
