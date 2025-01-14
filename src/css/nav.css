@@ -51,6 +51,13 @@ nav {
 
     padding: 4px;
     border-radius: 4px;
+    cursor: pointer;
+}
+
+.nav-link:hover {
+    transition: var(--link-transition-duration);
+    background-color: var(--color-weak-accent);
+    color: var(--color-accent);
 }
 
 /* Filter Links */
@@ -58,15 +65,6 @@ nav {
     display: flex;
     flex-direction: column;
     gap: 2px;
-}
-
-.filter-link {
-    cursor: pointer;
-}
-
-.filter-link:hover {
-    transition: var(--link-transition-duration);
-    background-color: var(--color-weak-accent);
 }
 
 .filter-link .nav-link__svg-container svg {
