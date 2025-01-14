@@ -111,6 +111,7 @@ nav {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
 }
 
 .project-links-section-title__svg-container svg {
