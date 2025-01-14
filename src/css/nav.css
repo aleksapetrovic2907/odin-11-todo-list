@@ -60,6 +60,12 @@ nav {
     color: var(--color-accent);
 }
 
+.nav-link .nav-link__svg-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* Filter Links */
 .filter-links {
     display: flex;
