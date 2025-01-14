@@ -33,9 +33,11 @@ function selectFilterer(filterType) {
 
         case "todays":
             filterer = filterTodays;
+            break;
 
         case "upcoming":
             filterer = filterUpcoming;
+            break;
 
         default:
             break;
