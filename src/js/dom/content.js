@@ -15,6 +15,7 @@ subscribeToEvents();
 
 function subscribeToEvents() {
     document.addEventListener("projectLinkSelected", (e) => {
+        filterer = null;
         displayProjects([projectsService.getProjectById(e.detail.projectId)]);
     });
 
