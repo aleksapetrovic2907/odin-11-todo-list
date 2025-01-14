@@ -10,6 +10,6 @@ export default class ColorService {
      */
     static getColorWithSteppedHue(startingHue, stepRatio, steps, saturation, brightness) {
         const newHue = (startingHue + stepRatio * steps) % 360;
-        return `hsl(${normalizedHue}, ${saturation}%, ${brightness}%)`;
+        return `hsl(${newHue}, ${saturation}%, ${brightness}%)`;
     }
 }
