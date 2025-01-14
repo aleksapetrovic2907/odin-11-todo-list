@@ -55,6 +55,11 @@
     font-weight: 300;
 }
 
+.task__actions {
+    display: flex;
+    align-items: center;
+}
+
 .task__actions svg {
     fill: var(--color-icon-default);
 }
