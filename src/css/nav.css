@@ -60,6 +60,11 @@ nav {
     color: var(--color-accent);
 }
 
+.nav-link.selected {
+    background-color: var(--color-weak-accent);
+    color: var(--color-accent);
+}
+
 .nav-link .nav-link__svg-container {
     display: flex;
     align-items: center;
