@@ -1,19 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 
 :root {
-    --color-primary: #E8F5E9; /* Very light pastel green */
-    --color-secondary: #C8E6C9; /* Soft mint green */
-    --color-weak-accent: #e6fde5; /* Hint of green */
-    --color-accent: #8fdf91; /* Slightly deeper pastel green */
-    --color-background: #F1F8E9; /* Very light yellow-green for backgrounds */
-    --color-neutral-light: #F9FBF8; /* Almost white, very subtle green tint */
-    --color-neutral-dark: #B9D7C9; /* Muted green-gray for text or borders */
-    --color-error: #FCE4EC; /* Pastel pink for errors */
-    --color-warning: #FFF3E0; /* Pastel orange for warnings */
-    --color-success: #C8E6C9; /* Reusing secondary for success feedback */
+    --color-primary: #FDECE9; /* Very light pastel orange */
+    --color-secondary: #F7C6BD; /* Soft peach-orange */
+    --color-weak-accent: #FFF0E5; /* Hint of orange */
+    --color-accent: #E34432; /* Vibrant orange for accents */
+    --color-background: #FFF7F4; /* Very light peach for backgrounds */
+    --color-neutral-light: #FCFAF8; /* Almost white with a subtle orange tint */
+    --color-neutral-dark: #D98B7B; /* Muted orange-brown for text or borders */
+    --color-error: #FCE4EC; /* Pastel pink for errors (unchanged) */
+    --color-warning: #FFE6D9; /* Pastel orange for warnings */
+    --color-success: #F7C6BD; /* Reusing secondary for success feedback */
 
-    --color-icon-default: #afb8bd; /* Default icon color */
-    --color-icon-hover: #8fdf91; /* Green hover color, matches your accent */
+    --color-icon-default: #BBA49D; /* Neutral warm grey for icons */
+    --color-icon-hover: #E34432; /* Matches the accent orange */
 }
 
 body {
