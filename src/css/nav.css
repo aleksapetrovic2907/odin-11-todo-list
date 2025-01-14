@@ -81,3 +81,35 @@ nav {
     transition: var(--link-transition-duration);
     fill: var(--color-icon-hover);
 }
+
+/* Project Links */
+.project-links-section-title {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 8px;
+
+    padding: 4px;
+    margin-bottom: 8px;
+}
+
+.project-links-section-title__text {
+    font-size: 1.2rem;
+}
+
+.project-links-section-title__svg-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-links-section-title__svg-container svg {
+    fill: var(--color-accent);
+    border-radius: 50%;
+}
+
+.project-links-section-title__svg-container:hover svg {
+    transition-duration: .1s;
+    transform: scale(1.1);
+}
