@@ -65,6 +65,13 @@
     fill: var(--color-icon-default);
 }
 
+button.task__actions-action {
+    border-radius: 50%;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
 /* Task Tooltip */
 .task-tooltip {
     position: relative;
