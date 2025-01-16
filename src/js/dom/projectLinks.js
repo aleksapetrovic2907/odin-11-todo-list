@@ -4,7 +4,7 @@ import { projectsService } from "../index.js";
 import TemplateService from "../services/templateService.js";
 import trySelect from "./linksManager.js";
 import ColorService from "../services/colorService.js";
-import { displayProjectPopup } from "./createEditPopup.js";
+import { displayProjectPopup } from "./createEditProjectPopup.js";
 
 const projectLinks = document.querySelector(".project-links");
 const addProjectButton = document.querySelector("#add-project");
