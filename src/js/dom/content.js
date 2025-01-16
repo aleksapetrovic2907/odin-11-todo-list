@@ -99,7 +99,7 @@ function generateProjectNode(project) {
 function generateTaskNode(project, task) {
     const data = {
         name: task.name,
-        dueDate: format(new Date(task.dueDate), "MMMM d, yyyy"),
+        dueDate: format(task.dueDate, "MMMM d, yyyy"),
         tooltipText: task.description,
     };
 
@@ -118,7 +118,7 @@ function generateTaskNode(project, task) {
     });
 
     const dueDateNode = taskNode.querySelector(".task__details-dueDate");
-    dueDateNode.classList.add(getClassNameForDueDate(new Date(task.dueDate)));
+    dueDateNode.classList.add(getClassNameForDueDate(task.dueDate));
 
     // TODO: Add event listeners to edit task.
 
