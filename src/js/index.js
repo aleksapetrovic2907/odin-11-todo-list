@@ -2,6 +2,7 @@ import 'normalize.css'
 import '../css/styles.css'
 import '../css/nav.css'
 import '../css/projects.css';
+import '../css/popups.css';
 
 import LocalStorageService from "./services/localStorageService.js";
 import ProjectsService from "./services/projectsService.js";
