@@ -6,6 +6,7 @@ import { projectsService } from "../index.js";
 import { filterAll, filterTodays, filterUpcoming } from "./filterer.js";
 import TemplateService from "../services/templateService.js";
 import { format, isPast, isToday, isFuture } from "date-fns";
+import { displayProjectPopup } from "./createEditProjectPopup.js";
 
 const projectsNode = document.querySelector(".projects");
 let displayedProjectsList = null;
@@ -86,6 +87,9 @@ function generateProjectNode(project) {
     const data = { name: project.name };
     const projectNode = TemplateService.render(projectTemplateUrl, data);
     const tasksNode = projectNode.querySelector(".tasks");
+
+    const editProjectNode = projectNode.querySelector(".project-name-container svg");
+    editProjectNode.addEventListener("click", () => displayProjectPopup(project.id));
 
     project.tasks.forEach(t => {
         const taskNode = generateTaskNode(project, t);
