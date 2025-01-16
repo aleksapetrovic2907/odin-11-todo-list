@@ -16,10 +16,10 @@ function displayProjectPopup(targetProjectId = null) {
     displayedPopupNode = TemplateService.render(PopupTemplateUrl, data);
     document.body.appendChild(displayedPopupNode);
 
-    const submitButton = displayedPopupNode.querySelector(".popup__button--save");
+    const form = displayedPopupNode.querySelector("#projectForm");
     const cancelButton = displayedPopupNode.querySelector(".popup__button--cancel");
 
-    submitButton.addEventListener("click", (e) => {
+    form.addEventListener("submit", (e) => {
         e.preventDefault();
         handleProjectFormSubmit(targetProjectId, isEditing);
     });
