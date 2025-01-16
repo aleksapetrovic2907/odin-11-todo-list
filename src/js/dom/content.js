@@ -5,7 +5,7 @@ import filterTypeTitleTemplateUrl from "../../html/content/filterTitle.html";
 import { projectsService } from "../index.js";
 import { filterAll, filterTodays, filterUpcoming } from "./filterer.js";
 import TemplateService from "../services/templateService.js";
-import { format } from "date-fns";
+import { format, isPast, isToday, isFuture } from "date-fns";
 
 const projectsNode = document.querySelector(".projects");
 let displayedProjectsList = null;
@@ -117,9 +117,19 @@ function generateTaskNode(project, task) {
         displayProjects(displayedProjectsList);
     });
 
+    const dueDateNode = taskNode.querySelector(".task__details-dueDate");
+    dueDateNode.classList.add(getClassNameForDueDate(new Date(task.dueDate)));
+
     // TODO: Add event listeners to edit task.
 
     return taskNode;
+}
+
+function getClassNameForDueDate(dueDate) {
+    if (isPast(dueDate)) return "due-date--past";
+    else if (isFuture(dueDate)) return "due-date--future";
+
+    return "due-date--present";
 }
 
 export { displayProjects };
