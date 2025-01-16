@@ -8,11 +8,13 @@ import ProjectsService from "./services/projectsService.js";
 
 import { selectFilter } from "./dom/filterLinks.js";
 import "./dom/content.js";
+import { refreshProjectLinks } from './dom/projectLinks.js';
 
 const storageService = new LocalStorageService();
 const projectsService = new ProjectsService(storageService);
 window.onbeforeunload = () => { projectsService.saveProjectsToStorage() };
 
 selectFilter("all");
+refreshProjectLinks();
 
 export { projectsService };
