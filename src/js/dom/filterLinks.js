@@ -29,3 +29,5 @@ function selectFilter(type) {
 
     document.dispatchEvent(event);
 }
+
+export { selectFilter };
