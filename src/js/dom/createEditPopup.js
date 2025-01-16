@@ -30,8 +30,7 @@ function handleProjectFormSubmit(targetProjectId) {
     const formData = new FormData(form);
 
     if (targetProjectId) {
-        // TODO: Implement project updating in projects service
-        // projectsService.updateProject(targetProjectId, projectData);
+        projectsService.updateProject(targetProjectId, formData.get("name"));
     } else {
         projectsService.createProject(formData.get("name"));
     }
