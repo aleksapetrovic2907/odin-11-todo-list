@@ -124,3 +124,15 @@ button.task__actions-action {
     border-style: solid;
     border-color: var(--color-accent) transparent transparent transparent;
 }
+
+.due-date--past {
+    color: red;
+}
+
+.due-date--present {
+    color: rgb(196, 196, 5);
+}
+
+.due-date--future {
+    color: green;
+}
