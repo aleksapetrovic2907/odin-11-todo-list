@@ -27,6 +27,11 @@ export default class ProjectsService {
         return project;
     }
 
+    updateProject(projectId, name) {
+        const targetProject = this.getProjectById(projectId);
+        targetProject.name = name;
+    }
+
     deleteProject(projectId) {
         this.projects = this.projects.filter(p => p.id !== projectId);
     }
