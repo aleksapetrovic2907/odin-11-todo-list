@@ -17,10 +17,21 @@
     margin-bottom: 48px;
 }
 
-.project__name {
+.project-name-container {
+    display: flex;
+    align-items: center;
+    border-bottom: 2px dotted var(--color-neutral-light-grey);
+    gap: 8px;
+}
+
+.project-name-text {
     font-size: 1.8rem;
     font-weight: 500;
-    border-bottom: 2px dotted var(--color-neutral-light-grey);
+}
+
+.project-name-container svg {
+    fill: var(--color-icon-default);
+    cursor: pointer;
 }
 
 /* Tasks */
