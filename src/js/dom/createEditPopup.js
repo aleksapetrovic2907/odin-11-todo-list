@@ -5,10 +5,12 @@ import { projectsService } from "../index.js";
 let displayedPopupNode = null;
 
 function displayProjectPopup(targetProjectId = null) {
+    const isEditing = targetProjectId !== null;
+
     const data = {
-        formTitle: targetProjectId ? "Create Project" : "Edit Project",
-        projectName: targetProjectId ? "" : projectsService.getProjectById(targetProjectId),
-        formSubmitButtonText: targetProjectId ? "Create" : "Save"
+        formTitle: isEditing ? "Edit Project" : "Add Project",
+        projectName: isEditing ? projectsService.getProjectById(targetProjectId).name : "",
+        formSubmitButtonText: isEditing ? "Save" : "Create"
     }
 
     displayedPopupNode = TemplateService.render(PopupTemplateUrl, data);
@@ -19,17 +21,17 @@ function displayProjectPopup(targetProjectId = null) {
 
     submitButton.addEventListener("click", (e) => {
         e.preventDefault();
-        handleProjectFormSubmit(targetProjectId);
+        handleProjectFormSubmit(targetProjectId, isEditing);
     });
 
     cancelButton.addEventListener("click", hideProjectPopup);
 }
 
-function handleProjectFormSubmit(targetProjectId) {
+function handleProjectFormSubmit(targetProjectId, isEditing) {
     const form = displayedPopupNode.querySelector("#projectForm");
     const formData = new FormData(form);
 
-    if (targetProjectId) {
+    if (isEditing) {
         projectsService.updateProject(targetProjectId, formData.get("name"));
     } else {
         projectsService.createProject(formData.get("name"));
