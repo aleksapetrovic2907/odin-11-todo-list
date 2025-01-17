@@ -13,7 +13,6 @@
 .project {
     display: flex;
     flex-direction: column;
-    gap: 8px;
     margin-bottom: 48px;
 }
 
@@ -22,6 +21,7 @@
     align-items: center;
     border-bottom: 2px dotted var(--color-neutral-light-grey);
     gap: 8px;
+    margin-bottom: 12px;
 }
 
 .project-name-text {
