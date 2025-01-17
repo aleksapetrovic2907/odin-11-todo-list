@@ -36,7 +36,7 @@ function displayTaskPopup(projectId, taskId = null) {
     displayedPopupNode = TemplateService.render(TaskPopupTemplateUrl, templateData);
     document.body.appendChild(displayedPopupNode);
 
-    const form = displayedPopupNode.querySelector("#projectForm");
+    const form = displayedPopupNode.querySelector("#taskForm");
     const cancelButton = displayedPopupNode.querySelector(".popup__button--cancel");
 
     form.addEventListener("submit", (e) => {
