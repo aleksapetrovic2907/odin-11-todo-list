@@ -12,6 +12,13 @@ export default class TaskService {
     createTask(name, description, dueDate) {
         const task = new Task(name, description, dueDate, this.project.Id);
         this.project.tasks.push(task);
+
+        const event = new CustomEvent("taskCreated", {
+            detail: { task },
+        });
+
+        document.dispatchEvent(event);
+
         return task;
     }
 
@@ -25,6 +32,8 @@ export default class TaskService {
 
     deleteTask(id) {
         this.project.tasks = this.project.tasks.filter(t => t.id !== id);
+        const event = new CustomEvent("taskDeleted");
+        document.dispatchEvent(event);
     }
 
     updateTask(id, data) {
@@ -33,5 +42,11 @@ export default class TaskService {
         if (task) {
             Object.assign(task, data);
         }
+
+        const event = new CustomEvent("taskUpdated", {
+            detail: { task },
+        });
+
+        document.dispatchEvent(event);
     }
 }
