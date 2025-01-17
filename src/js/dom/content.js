@@ -97,7 +97,6 @@ function generateProjectNode(project) {
         tasksNode.appendChild(taskNode);
     });
 
-    projectNode.appendChild(tasksNode);
     return projectNode;
 }
 
