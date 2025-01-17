@@ -26,7 +26,7 @@ function displayTaskPopup(projectId, taskId = null) {
         templateData = {
             formTitle: "Add Task",
             formSubmitButtonText: "Add",
-            taskname: "",
+            taskName: "",
             taskDescription: "",
             taskDueDate: todayDate,
             minTaskDueDate: todayDate
