@@ -26,6 +26,9 @@ function subscribeToEvents() {
         const filteredProjects = filterer(projectsService.getAllProjects());
         displayProjects(filteredProjects);
     });
+
+    document.addEventListener("projectCreated", () => displayProjects(displayedProjectsList));
+    document.addEventListener("projectUpdated", () => displayProjects(displayedProjectsList));
 }
 
 function selectFilterer(filterType) {
