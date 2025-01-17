@@ -29,6 +29,9 @@ function subscribeToEvents() {
 
     document.addEventListener("projectCreated", () => displayProjects(displayedProjectsList));
     document.addEventListener("projectUpdated", () => displayProjects(displayedProjectsList));
+    document.addEventListener("taskCreated", () => displayProjects(displayedProjectsList));
+    document.addEventListener("taskDeleted", () => displayProjects(displayedProjectsList));
+    document.addEventListener("taskUpdated", () => displayProjects(displayedProjectsList));
 }
 
 function selectFilterer(filterType) {
@@ -124,7 +127,6 @@ function generateTaskNode(project, task) {
     const deleteBtn = taskNode.querySelector(".task-delete");
     deleteBtn.addEventListener("click", () => {
         taskService.deleteTask(task.id);
-        displayProjects(displayedProjectsList);
     });
 
     const dueDateNode = taskNode.querySelector(".task__details-dueDate");
