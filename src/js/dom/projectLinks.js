@@ -9,6 +9,8 @@ import { displayProjectPopup } from "./createEditProjectPopup.js";
 const projectLinks = document.querySelector(".project-links");
 const addProjectButton = document.querySelector("#add-project");
 addProjectButton.addEventListener("click", () => displayProjectPopup());
+document.addEventListener("projectCreated", refreshProjectLinks);
+document.addEventListener("projectUpdated", refreshProjectLinks);
 
 function refreshProjectLinks() {
     projectLinks.innerHTML = "";
