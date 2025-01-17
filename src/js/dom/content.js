@@ -7,6 +7,7 @@ import { filterAll, filterTodays, filterUpcoming } from "./filterer.js";
 import TemplateService from "../services/templateService.js";
 import { format, isPast, isToday, isFuture } from "date-fns";
 import { displayProjectPopup } from "./createEditProjectPopup.js";
+import { displayTaskPopup } from "./createEditTaskPopup.js";
 
 const projectsNode = document.querySelector(".projects");
 let displayedProjectsList = null;
@@ -124,7 +125,10 @@ function generateTaskNode(project, task) {
     const dueDateNode = taskNode.querySelector(".task__details-dueDate");
     dueDateNode.classList.add(getClassNameForDueDate(task.dueDate));
 
-    // TODO: Add event listeners to edit task.
+    const editTaskNode = taskNode.querySelector(".task-edit");
+    editTaskNode.addEventListener("click", () => {
+        displayTaskPopup(project.id, task.id);
+    });
 
     return taskNode;
 }
