@@ -48,7 +48,7 @@ function displayTaskPopup(projectId, taskId = null) {
 }
 
 function handleTaskFormSubmit(projectId, taskId, isEditing) {
-    const form = displayedPopupNode.querySelector("#projectForm");
+    const form = displayedPopupNode.querySelector("#taskForm");
     const formData = new FormData(form);
     const taskService = projectsService.getTaskServiceForProject(projectId);
 
