@@ -67,7 +67,7 @@ function handleTaskFormSubmit(projectId, taskId, isEditing) {
         );
     }
 
-    hideProjectPopup();
+    hideTaskPopup();
 }
 
 function hideTaskPopup() {
