@@ -147,3 +147,25 @@ button.task__actions-action {
 .due-date--future {
     color: green;
 }
+
+.add-task {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px 0px;
+    border: 2px dashed var(--color-weak-accent);
+    cursor: pointer;
+    transition: background-color 0.1s ease-in-out;
+}
+
+.add-task:hover {
+    background-color: var(--color-accent);
+}
+
+.add-task:hover .add-task__text {
+    color: white;
+}
+
+.add-task__text {
+    color: var(--color-accent);
+}
