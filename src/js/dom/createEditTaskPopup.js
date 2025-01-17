@@ -53,7 +53,7 @@ function handleTaskFormSubmit(projectId, taskId, isEditing) {
     const taskService = projectsService.getTaskServiceForProject(projectId);
 
     if (isEditing) {
-        data = {
+        let data = {
             name: formData.get("name"),
             description: formData.get("description"),
             dueDate: formData.get("dueDate"),
