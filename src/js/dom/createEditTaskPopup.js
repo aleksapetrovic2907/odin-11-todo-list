@@ -14,6 +14,8 @@ function displayTaskPopup(projectId, taskId = null) {
     if (isEditing) {
         const targetTask = projectsService.getTaskServiceForProject(projectId).getTaskById(taskId);
         templateData = {
+            formTitle: "Edit Task",
+            formSubmitButtonText: "Save",
             taskName: targetTask.name,
             taskDescription: targetTask.description,
             taskDueDate: targetTask.dueDate,
@@ -22,6 +24,8 @@ function displayTaskPopup(projectId, taskId = null) {
     }
     else {
         templateData = {
+            formTitle: "Add Task",
+            formSubmitButtonText: "Add",
             taskname: "",
             taskDescription: "",
             taskDueDate: startOfDay(new Date()),
