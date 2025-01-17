@@ -24,6 +24,13 @@ export default class ProjectsService {
     createProject(name) {
         const project = new Project(name);
         this.projects.push(project);
+
+        const event = new CustomEvent("projectCreated", {
+            detail: { project },
+        });
+
+        document.dispatchEvent(event);
+
         return project;
     }
 
