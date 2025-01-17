@@ -1,4 +1,4 @@
-import TaskPopupTemplateUrl from "../../html/popups/createEditTaskPopup.js";
+import TaskPopupTemplateUrl from "../../html/popups/createEditTaskPopup.html";
 import TemplateService from "../services/templateService.js";
 import { projectsService } from "../index.js";
 import { startOfDay } from "date-fns";
