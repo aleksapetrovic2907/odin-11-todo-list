@@ -1,4 +1,4 @@
-import PopupTemplateUrl from "../../html/popups/project-popup.html";
+import PopupTemplateUrl from "../../html/popups/createEditProjectPopup.html";
 import TemplateService from "../services/templateService.js";
 import { projectsService } from "../index.js";
 
