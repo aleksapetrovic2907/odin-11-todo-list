@@ -1,7 +1,7 @@
 import TaskPopupTemplateUrl from "../../html/popups/createEditTaskPopup.html";
 import TemplateService from "../services/templateService.js";
 import { projectsService } from "../index.js";
-import { startOfDay } from "date-fns";
+import { startOfDay, format } from "date-fns";
 
 let displayedPopupNode = null;
 
@@ -9,7 +9,7 @@ function displayTaskPopup(projectId, taskId = null) {
     const isEditing = taskId !== null;
 
     let templateData;
-    const todayDate = startOfDay(new Date());
+    const todayDate = format(startOfDay(new Date()), "yyyy-MM-dd");
 
     if (isEditing) {
         const targetTask = projectsService.getTaskServiceForProject(projectId).getTaskById(taskId);
@@ -18,7 +18,7 @@ function displayTaskPopup(projectId, taskId = null) {
             formSubmitButtonText: "Save",
             taskName: targetTask.name,
             taskDescription: targetTask.description,
-            taskDueDate: targetTask.dueDate,
+            taskDueDate: format(targetTask.dueDate, "yyyy-MM-dd"),
             minTaskDueDate: todayDate
         }
     }
@@ -28,7 +28,7 @@ function displayTaskPopup(projectId, taskId = null) {
             formSubmitButtonText: "Add",
             taskname: "",
             taskDescription: "",
-            taskDueDate: startOfDay(new Date()),
+            taskDueDate: todayDate,
             minTaskDueDate: todayDate
         }
     }
