@@ -1,0 +1,21 @@
+<div class="popup project-popup">
+    <form class="popup__form" id="taskForm">
+        <h2 class="popup__title">{{formTitle}}</h2>
+        <div class="popup__field">
+            <label for="taskname" class="popup__label">Name</label>
+            <input type="text" id="taskName" name="name" class="popup__input" value="{{taskName}}" required />
+        </div>
+        <div class="popup__field">
+            <label for="taskDescription" class="popup__label">Description</label>
+            <input type="text" id="taskDescription" name="name" class="popup__input" value="{{taskDescription}}" />
+        </div>
+        <div class="popup__field">
+            <label for="taskDueDate" class="popup__label">Due Date</label>
+            <input type="date" id="taskDueDate" name="name" class="popup__input" min="{{minTaskDueDate}}" value="{{taskDueDate}}" required />
+        </div>
+        <div class="popup__actions">
+            <button type="submit" class="popup__button popup__button--save">{{formSubmitButtonText}}</button>
+            <button type="button" class="popup__button popup__button--cancel">Cancel</button>
+        </div>
+    </form>
+</div>
