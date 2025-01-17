@@ -37,6 +37,12 @@ export default class ProjectsService {
     updateProject(projectId, name) {
         const targetProject = this.getProjectById(projectId);
         targetProject.name = name;
+
+        const event = new CustomEvent("projectUpdated", {
+            detail: { targetProject },
+        });
+
+        document.dispatchEvent(event);
     }
 
     deleteProject(projectId) {
