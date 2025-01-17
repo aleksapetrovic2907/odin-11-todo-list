@@ -134,10 +134,9 @@ function generateTaskNode(project, task) {
 }
 
 function getClassNameForDueDate(dueDate) {
+    if (isToday(dueDate)) return "due-date--present";
     if (isPast(dueDate)) return "due-date--past";
-    else if (isFuture(dueDate)) return "due-date--future";
-
-    return "due-date--present";
+    if (isFuture(dueDate)) return "due-date--future";
 }
 
 export { displayProjects };
