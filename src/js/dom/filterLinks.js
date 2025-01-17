@@ -30,4 +30,8 @@ function selectFilter(type) {
     document.dispatchEvent(event);
 }
 
+if (trySelect(allTasksLink)) {
+    selectFilter("all");
+}
+
 export { selectFilter };
