@@ -97,6 +97,9 @@ function generateProjectNode(project) {
         tasksNode.appendChild(taskNode);
     });
 
+    const addTaskNode = projectNode.querySelector(".add-task");
+    addTaskNode.addEventListener("click", () => displayTaskPopup(project.id));
+
     return projectNode;
 }
 
