@@ -117,7 +117,16 @@ function generateTaskNode(project, task) {
     };
 
     const taskNode = TemplateService.render(taskTemplateUrl, data);
-
+    const completionMarkNode = taskNode.querySelector(".task__completion-mark");
+    completionMarkNode.addEventListener("click", () => {
+        task.isCompleted = !task.isCompleted;
+        if(task.isCompleted) {
+            completionMarkNode.classList.add("task-completed");
+        } else {
+            completionMarkNode.classList.remove("task-completed");
+        }
+    });
+    
     const tooltip = taskNode.querySelector(".task-tooltip");
     if (!task.description) {
         tooltip.remove();
