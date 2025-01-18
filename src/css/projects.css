@@ -50,6 +50,11 @@
     cursor: pointer;
 }
 
+.task__completion-mark.task-completed {
+    border: none;
+    background-color: var(--color-accent);
+}
+
 .task__completion-mark:hover {
     transition-duration: .1s;
     transform: scale(1.1);
