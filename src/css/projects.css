@@ -48,11 +48,23 @@
     width: 1.25rem;
     background-color: transparent;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.task__completion-mark svg {
+    visibility: hidden;
+    transform: scale(2);
 }
 
 .task__completion-mark.task-completed {
     border: none;
     background-color: var(--color-accent);
+}
+
+.task__completion-mark.task-completed svg {
+    visibility: visible;
 }
 
 .task__completion-mark:hover {
